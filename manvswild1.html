@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Fetch exactly version 7.0.0 -->
+<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.0.0/viewer3D.min.js"></script>
+
+<!-- Fetch latest patch version for 7.0 -->
+<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.0.*/viewer3D.min.js"></script>
+
+<!-- Also fetch latest patch version for 7.0 -->
+<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.0/viewer3D.min.js"></script>
+
+<!-- Fetch latest minor version for 7.0 -->
+<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
 <style> 
 .player{
     display : none;
@@ -1198,7 +1209,12 @@ body.active { overflow: hidden; }
   /**
    * HEADER
    */
-
+#forgeViewer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: #F0F8FF;
+        }
   .header .container { gap: 30px; }
 
   .header-actions {
@@ -1828,7 +1844,7 @@ body.active { overflow: hidden; }
     
 </div>
             </div>
-
+<div id="forgeViewer"></div>
             <a href="https://send.cm/bq2ac2x6o01a" download class="download-btn">
               <span>Download 720p</span>
 
